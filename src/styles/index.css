@@ -1,8 +1,11 @@
 :root {
   --font-family-main: sans-serif;
 
+  --font-size-header: 26px;
+
   --color-white: #fff;
   --color-black: #000;
+  --color-yellow: #ffff00;
   --color-dark-grey: #10100e;
 
   --spacing-medium: 20px;
