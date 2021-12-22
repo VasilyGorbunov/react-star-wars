@@ -20,7 +20,7 @@ const PeopleList = ({ people }) => {
 }
 
 PeopleList.propTypes = {
-    //test: PropTypes.string,
+    people: PropTypes.array,
 }
 
 export default PeopleList;
