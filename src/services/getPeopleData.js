@@ -1,7 +1,8 @@
 import { 
   HTTPS, 
   SWAPI_ROOT, 
-  SWAPI_PEOPLE, 
+  SWAPI_PEOPLE,
+  SWAPI_PARAM_PAGE, 
   GUIDE_IMG_EXTENSION, 
   URL_IMG_PERSON 
 } from '../constants/api'
@@ -11,7 +12,13 @@ const getId = (url, category) => {
     .replace(HTTPS + SWAPI_ROOT + category, '')
     .replace(/\//g, '')
 
-  return id
+  return Number(id)
+}
+
+export const getPeoplePageId = url => {
+  const pos = url.lastIndexOf(SWAPI_PARAM_PAGE)
+  const id = url.slice(pos + SWAPI_PARAM_PAGE.length, url.length)
+  return Number(id)
 }
 
 export const getPeopleId = url => getId(url, SWAPI_PEOPLE)
