@@ -27,5 +27,13 @@ export const getApiResource = async (url) => {
 
 }
 
+export const makeConcurrentRequest = async (urls) => {
+  const result = await Promise.all(urls.map( res => {
+    return fetch(res).then(res => res.json());
+  }));
+
+  return result;
+}
+
 
 
