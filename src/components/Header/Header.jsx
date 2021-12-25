@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+import Favorite from "../Favorite";
 import { NavLink } from 'react-router-dom'
 import styles from './Header.module.css'
 
@@ -20,10 +20,9 @@ const Header = () => {
           </NavLink>
         </li>
       </ul>
+      <Favorite/>
     </div>
   )
 }
-
-Header.propTypes = {}
 
 export default Header
