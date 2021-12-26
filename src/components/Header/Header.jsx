@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
-import { NavLink } from 'react-router-dom'
-import { useTheme, THEME_DARK, THEME_LIGHT, THEME_NEUTRAL, } from "@context/ThemeProvider";
+import {NavLink} from 'react-router-dom'
+import {useTheme, THEME_DARK, THEME_LIGHT, THEME_NEUTRAL,} from "@context/ThemeProvider";
 
 import imgDroid from "./img/droid.svg"
 import imgLightSaber from "./img/lightsaber.svg"
@@ -36,17 +36,16 @@ const Header = () => {
       <img src={icon} alt="" className={styles.logo}/>
       <ul className={styles.list__container}>
         <li>
-          <NavLink to='/' exact>
-            Home
-          </NavLink>
+          <NavLink to='/' exact>Home</NavLink>
         </li>
         <li>
           <NavLink to='/people/?page=1'>People</NavLink>
         </li>
         <li>
-          <NavLink to='/not-found' exact>
-            Not Found
-          </NavLink>
+          <NavLink to='/search' exact>Search</NavLink>
+        </li>
+        <li>
+          <NavLink to='/not-found' exact>Not Found</NavLink>
         </li>
       </ul>
       <Favorite/>
